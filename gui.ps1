@@ -9,7 +9,6 @@ $ScriptXAML = @"
         <TextBox Name="Disclaimer" HorizontalAlignment="Left" Height="27" Margin="295,144,0,0" TextWrapping="Wrap" Text="*Disclaimer: Not very interesting, but will get better soon!" VerticalAlignment="Top" Width="477" TextAlignment="Center" BorderThickness="0"/>
         <Button Name="UserCreate" Content="User Creator" HorizontalAlignment="Left" Height="59" Margin="390,171,0,0" VerticalAlignment="Top" Width="112"/>
         <Button Name="UserDisable" Content="Disable User" HorizontalAlignment="Left" Height="59" Margin="570,171,0,0" VerticalAlignment="Top" Width="112"/>
-        <Button Name="WMS" Content="WMS FE Folder" HorizontalAlignment="Left" Height="59" Margin="390,247,0,0" VerticalAlignment="Top" Width="112"/>
         <Button Name="locked" Content="Are They Locked?" HorizontalAlignment="Left" Height="59" Margin="570,247,0,0" VerticalAlignment="Top" Width="112"/>
         <Button Name="QuickExchange" Content="Quick Exchange" HorizontalAlignment="Left" Height="59" Margin="390,325,0,0" VerticalAlignment="Top" Width="112"/>
     </Grid>
@@ -46,7 +45,6 @@ $qepath = "C:\ScriptLauncher9000\quickexchange.ps1"
 
 $UserCreate.Add_Click({Start-Process -FilePath "powershell" C:\ScriptLauncher9000\UserCreationV2.ps1})
 $QuickExchange.Add_Click({Start-Process powershell -ArgumentList "-noexit", "C:\ScriptLauncher9000\quickexchange.ps1"})
-$WMS.Add_Click({Start-Process -FilePath "powershell" C:\ScriptLauncher9000\wms.ps1})
 $Lockedout.Add_Click({Start-Process -FilePath "powershell" C:\ScriptLauncher9000\aretheylocked.ps1})
 $UserDisable.Add_Click({Start-Process -FilePath "powershell" C:\ScriptLauncher9000\UserRemoval.ps1})
 
